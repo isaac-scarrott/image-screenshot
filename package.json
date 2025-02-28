@@ -4,7 +4,10 @@
   "type": "module",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "init": "pnpm install && playwright install",
+    "start": "node index.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
