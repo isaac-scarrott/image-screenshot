@@ -50,6 +50,9 @@ const takeScreenshots = async () => {
     `Found ${urlList.length} URLs and ${deviceSizes.length} device sizes in config.json`,
   );
 
+  // Get current date in YYYY-MM-DD format
+  const currentDate = new Date().toISOString().split("T")[0];
+
   // Launch browser
   const browser = await chromium.launch();
 
@@ -60,8 +63,8 @@ const takeScreenshots = async () => {
       .replace(/^https?:\/\//, "")
       .replace(/[^a-zA-Z0-9]/g, "_");
 
-    // Create URL-specific directory
-    const urlDir = path.join(outputDir, urlFilename);
+    // Create URL-specific directory with date prefix
+    const urlDir = path.join(outputDir, `${currentDate}_${urlFilename}`);
     if (!existsSync(urlDir)) {
       mkdirSync(urlDir, { recursive: true });
     }
