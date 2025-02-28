@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "init": "pnpm install && pnpx playwright install",
     "start": "node main.js"
