@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "init": "pnpm install && playwright install",
+    "init": "pnpm install && pnpx playwright install",
     "start": "node index.js"
   },
   "keywords": [],
