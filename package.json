@@ -16,6 +16,7 @@
     "@types/node": "^22.13.5"
   },
   "dependencies": {
-    "playwright": "^1.50.1"
+    "playwright": "^1.50.1",
+    "sharp": "^0.34.0"
   }
 }
